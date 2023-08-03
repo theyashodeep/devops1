@@ -1,1 +1,29 @@
 This is my Repository for SSH key snd GPG key reneration.
+
+ssh-keygen -t rsa -b 4096 -C "theyashodeep@gmail.com"
+
+cat ~/.ssh/id_rsa.pub
+
+git clone git@github.com:theyashodeep/devops1.git
+
+cd devops1
+git status
+gpg --full-generate-key
+gpg --list-secret-key --keyid-format=long
+gpg --armor --export 8EFA4D56D26FB61F
+
+gpg --list-secret-key --keyid-format=long
+git config --local commit.gpgsign true
+git config --local user.signingkey 8EFA4D56D26FB61F
+
+touch myrepo
+vim myrepo 
+git status
+git add myrepo 
+git commit -m "Initial Command"
+git status
+git push
+
+
+
+
